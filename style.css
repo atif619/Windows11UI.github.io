@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(images/Windows\ 11\ wallpaper\ home.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom-div {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #f3f3f3;
+    bottom: 0;
+    z-index: 999;
+}
+
+.img-container {
+    width: 350px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-container img {
+    width: 30px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.img-container img:hover {
+    scale: 1;
+}
+.date{
+    position: absolute;
+    right: 0;
+    z-index: 100000;
+    display: none;
+    transition: 0.2s;
+}
+.date.active{
+    display: block;
+}
+.date img{
+    height: 690px;
+}
+.file-manager{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.file-manager.active{
+    display: block;
+}
+.file-manager img{
+    width: 900px;
+    height: 600px;
+}
+.icons{
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+}
+.icons .fa{
+    margin: 0 3px 0 0;
+    color: rgba(0,0,0,.8);
+    cursor: default;
+    height: 50px;
+    line-height: 50px;
+    transition: 0.3s;
+    padding: 0 2px;
+}
+.icons .fa:hover{
+    background-color: rgba(0,0,0,.1);
+}
+.icons .fa:nth-child(1){
+    font-size: 22px;
+}
+.icons .fa:nth-child(2){
+    transform: rotate(-45deg);
+}
+.icons .fa:hover:nth-child(2){
+    background-color: rgba(0,0,0,.1);
+    transform: rotate(0deg);
+}
+.time{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: default;
+}
+.time span{
+    font-size: 12px;
+    padding: 0 2px;
+}
+.time:hover{
+    background-color: rgba(0,0,0,.1);
+}
+.windows-items {
+    width: 550px;
+    padding: 0 20px;
+    height: 600px;
+    background: #efefef;
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transition: 0.4s;
+    transform: translateX(-50%);
+
+}
+
+.windows-items.active {
+    bottom: 65px;
+}
+
+.windows-items .heading {
+    width: 90%;
+    margin: 25px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.windows-items .heading .btn {
+    width: auto;
+    padding: 6px 14px;
+    outline: none;
+    border: none;
+    background: #fff;
+
+}
+
+.windows-items .row {
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.windows-items .row .choose-items {
+    text-align: center;
+    margin-bottom: 25px;
+    flex-basis: 18%;
+    cursor: pointer;
+}
+.windows-items .row .choose-items:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+.windows-items .row .choose-items img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.windows-items .row .choose-items h5 {
+    font-size: 12px;
+}
+
+.recomended {
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+.recomended h3 {
+    font-size: 15px;
+}
+
+.recomended .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.recomended .row1 .col1 {
+    flex-basis: 40%;
+    margin: 8px 0;
+}
+
+.recomended .row1 .col1 .sub-col {
+    display: flex;
+    align-items: center;
+    padding: 3px 0 3px 8px;
+}
+.recomended .row1 .col1 .sub-col:hover{
+    background-color: rgba(255,255,255,0.9);
+}
+.recomended .row1 .col1 .sub-col h4 {
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.recomended .row1 .col1 .sub-col h4 span {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.recomended .row1 .col1 .sub-col img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.account{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 60px;
+    background: #c9ceda;
+    border-radius: 5px;
+}
+.account .acc-row{
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.account .acc-row .user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account .acc-row .user .fa{
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.account .acc-row .fa-power-off{
+    color: rgba(0,0,0,.7);
+    cursor: pointer;
+}
+.desktop_icon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 0 0 15px;
+    
+}
+.desktop_icon:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+.desktop_icon img{
+    width: 60px;
+    cursor: pointer;
+}
+.desktop_icon .name{
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
